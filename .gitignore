@@ -3,3 +3,9 @@ include
 bin
 .tscope.conf
 db.txt
+*~
+*.swp
+*.sh
+.DS_Store
+.tmp
+.Python
