@@ -8,3 +8,4 @@
 - [ ] buffer api request part
 - [ ] If buffer response with an error, throw error requesting more api calls
 - [ ] Figure out how to put config files inside a folder at `~/`
+- [ ] Take a screenshot of the website and send it to buffer/twitter (using selenium)
