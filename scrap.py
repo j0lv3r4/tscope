@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import feedparser
 import requests
@@ -13,11 +12,6 @@ DB_FILE_NAME = '.tscope_db'
 CONFIG_FILE_NAME = '.tscope.conf'
 DB_FULLPATH = TS_PATH + DB_FILE_NAME
 CONFIG_FULLPATH = TS_PATH + CONFIG_FILE_NAME
-
-# API
-# BITLY_API_KEY = 'R_7825cc74bd8d6b245a52f13d37f26b8a'
-# BITLY_API_URL = 'https://api-ssl.bitly.com/v3/user/link_save'
-# BITLY_API_ACCESS_TOKEN = '80ff35d776401f6cee9c7319de07d399a22df08f'
 
 # Console colors 
 W = '\033[0m'  # white (normal)
@@ -89,11 +83,8 @@ def short_link(url):
     query_args = {'access_token':bitly_api_access_token, 'longUrl':url}
     encode_args = urllib.urlencode(query_args)
     bitly_request = bitly_api_url + '?' + encode_args
-
     print_info('sending request to: ' + R + 'bit.ly' + W + ', query: ' + R + bitly_request)
-
     r = requests.get(bitly_request)
-    # print json.dumps(r.json(), indent=4)
     status_code = r.json()['status_code']
 
     if status_code == 403:
