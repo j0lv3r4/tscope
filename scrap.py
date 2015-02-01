@@ -64,9 +64,9 @@ try:
     parser.read(CONFIG_FULLPATH)
 
     project_url = parser.get('base', 'project')
-    bitly_api_key = parser.get('bit.ly', 'bitly_api_key')
-    bitly_api_access_token = parser.get('bit.ly', 'bitly_api_access_token')
-    bitly_api_url = parser.get('bit.ly', 'bitly_api_url')
+    bitly_api_key = parser.get('bit.ly', 'api_key')
+    bitly_api_access_token = parser.get('bit.ly', 'api_access_token')
+    bitly_api_url = parser.get('bit.ly', 'api_url')
 
     # Printing data
     print_info('project: ' + R + project_url)
